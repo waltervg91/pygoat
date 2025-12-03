@@ -5,7 +5,7 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"        # o "pip", "maven", "docker", etc.
+  - package-ecosystem: "pip"        # o "pip", "maven", "docker", etc.
     directory: "/"                  # carpeta donde está el archivo de dependencias
     schedule:
       interval: "weekly"            # daily, weekly, monthly
