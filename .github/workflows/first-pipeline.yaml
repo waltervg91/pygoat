@@ -1,0 +1,34 @@
+name: example
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  compilation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compilation
+        run: echo "Compiling"
+
+  build:
+    runs-on: ubuntu-latest
+    needs: compilation
+    steps:
+      - name: Build
+        run: echo "Building"
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Test
+        run: echo "Testing"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Deploy
+        run: echo "Deploying"
